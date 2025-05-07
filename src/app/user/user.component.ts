@@ -1,13 +1,17 @@
 import { Component,Input,Output,EventEmitter } from '@angular/core';
 
 import {type User} from './user.model'
-import { CardComponent } from '../shared/card/card.component';
+// import { CardComponent } from '../shared/card/card.component';
+// // required when stanalone components approach
 
 
 @Component({
     selector: 'app-user',
-    standalone:true,
-    imports: [CardComponent],
+    /*
+      standalone:true,
+      imports: [CardComponent],
+    */ // for standalone approach
+    standalone:false, // migration from standalone to module approach
     templateUrl: './user.component.html',
     styleUrl: './user.component.css'
 })
